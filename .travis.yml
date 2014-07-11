@@ -1,7 +1,7 @@
 language: scala
 
 scala:
-  - 2.10.0
+  - 2.10.3
 
 jdk:
   - oraclejdk7
@@ -9,7 +9,7 @@ jdk:
   - openjdk7
 
 script:
-  - sbt ++$TRAVIS_SCALA_VERSION finagle-zookeeper/test
+  - "sbt ++$TRAVIS_SCALA_VERSION test-only com.twitter.finagle.exp.zookeeper.unit.*"
 
 notifications:
   irc: "chat.freenode.net#finagle-zookeeper"
