@@ -33,3 +33,4 @@ object finaglezk extends Build {
     logLevel := Level.Debug
   )
 }
+
