@@ -3,12 +3,6 @@ import Keys._
 
 object finaglezk extends Build {
   val FinVersion = "6.18.0"
-  name := "finagle-zookeeper"
-
-  lazy val root = Project(
-    id = "finagle-zookeeper",
-    base = file("."),
-    settings = Defaults.itSettings ++ baseSettings ++ buildSettings)
 
   val baseSettings = Defaults.defaultSettings ++ Seq(
     libraryDependencies ++= Seq(
@@ -26,9 +20,15 @@ object finaglezk extends Build {
   )
 
   lazy val buildSettings = Seq(
+    name := "finagle-zookeeper",
     organization := "com.twitter.finagle",
     version := FinVersion,
-    scalaVersion := "2.10.0",
+    crossScalaVersions := Seq("2.9.2", "2.10.0"),
     logLevel := Level.Debug
   )
+
+  lazy val root = Project(id = "finagle-zookeeper",
+    base = file("."),
+    settings = Defaults.itSettings ++ baseSettings ++ buildSettings)
+    .configs(IntegrationTest)
 }
