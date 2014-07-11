@@ -9,7 +9,7 @@ jdk:
   - openjdk7
 
 script:
-  - "./sbt ++$TRAVIS_SCALA_VERSION src/test"
+  - "./sbt ++$TRAVIS_SCALA_VERSION finaglezk/test"
 
 notifications:
   irc: "chat.freenode.net#finagle-zookeeper"
