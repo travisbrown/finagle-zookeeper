@@ -4,7 +4,6 @@ import Keys._
 object finaglezk extends Build {
   val FinVersion = "6.18.0"
   name := "finagle-zookeeper"
-  scalaVersion := "2.10.0"
 
   lazy val root = Project(
     id = "finagle-zookeeper",
@@ -33,4 +32,3 @@ object finaglezk extends Build {
     logLevel := Level.Debug
   )
 }
-
