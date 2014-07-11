@@ -28,7 +28,7 @@ object finaglezk extends Build {
     logLevel := Level.Debug
   )
 
-  lazy val root = Project(id = "finagle-zk",
+  lazy val root = Project(id = "finagle-zookeeper",
     base = file("."),
     settings = Defaults.itSettings ++ baseSettings ++ buildSettings)
     .configs(IntegrationTest)
