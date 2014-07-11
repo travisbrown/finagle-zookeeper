@@ -1,21 +1,15 @@
 language: scala
 
 scala:
-  - 2.9.2
   - 2.9.3
-  - 2.10.4
 
 jdk:
   - oraclejdk7
   - openjdk6
   - openjdk7
 
-before_script:
-
-
 script:
-  # run for all environments
-  - ./sbt ++$TRAVIS_SCALA_VERSION src/unit
+  - "./sbt ++$TRAVIS_SCALA_VERSION src/test"
 
 notifications:
   irc: "chat.freenode.net#finagle-zookeeper"
