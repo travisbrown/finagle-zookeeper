@@ -4,7 +4,7 @@ import Keys._
 object finaglezk extends Build {
   val FinVersion = "6.18.0"
 
-  logLevel := Level.Info
+  name := "finagle-zookeeper"
 
   val baseSettings = Defaults.defaultSettings ++ Seq(
     libraryDependencies ++= Seq(
@@ -31,5 +31,4 @@ object finaglezk extends Build {
   lazy val root = Project(id = "finagle-zookeeper",
     base = file("."),
     settings = Defaults.itSettings ++ baseSettings ++ buildSettings)
-    .configs(IntegrationTest)
 }
