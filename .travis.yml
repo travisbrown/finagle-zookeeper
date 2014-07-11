@@ -16,7 +16,7 @@ before_script:
 
 script:
   # run for all environments
-  - ./sbt ++$TRAVIS_SCALA_VERSION finagle-zookeeper/test/scala/unit
+  - ./sbt ++$TRAVIS_SCALA_VERSION src/unit
 
 notifications:
   irc: "chat.freenode.net#finagle-zookeeper"
